@@ -1110,6 +1110,17 @@ body.offcanvas .colorlib-nav-toggle {
   vertical-align: middle;
 }
 
+.services .icon img {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+  display: table-cell;
+  vertical-align: middle;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
 .services .desc {
   margin-top: 60px;
 }
@@ -1118,6 +1129,61 @@ body.offcanvas .colorlib-nav-toggle {
   font-size: 16px;
   font-weight: 700;
   text-transform: uppercase;
+}
+
+.services .desc p {
+  line-height: 1.8;
+  margin-bottom: 0;
+}
+
+.skills-services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 36px 30px;
+  align-items: stretch;
+  margin-top: 10px;
+}
+
+.specialization-item {
+  width: 100%;
+  min-width: 0;
+}
+
+.specialization-item .services {
+  width: 100%;
+  min-height: 285px;
+  margin-bottom: 0;
+  margin-top: 40px;
+  padding: 1.75em 1.5em 1.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.specialization-item .desc {
+  margin-top: 72px;
+  padding: 0 4px;
+}
+
+.specialization-item .desc h3 {
+  font-size: clamp(17px, 1.15vw, 21px);
+  line-height: 1.35;
+  margin-bottom: 18px;
+}
+
+.specialization-item .desc p {
+  font-size: clamp(14px, 0.98vw, 16px);
+  line-height: 1.85;
+}
+
+@media screen and (max-width: 1199px) {
+  .skills-services-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .specialization-item .services {
+    min-height: 260px;
+  }
 }
 
 .services.color-2 .icon {
@@ -1178,6 +1244,31 @@ body.offcanvas .colorlib-nav-toggle {
 
 .services.color-6 .icon:after {
   border-color: #4054b2 transparent transparent transparent;
+}
+
+@media screen and (max-width: 768px) {
+  .skills-services-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .specialization-item .services {
+    min-height: auto;
+    padding: 1.75em 1.2em 1.35em;
+  }
+
+  .specialization-item .desc {
+    margin-top: 68px;
+    padding: 0;
+  }
+
+  .specialization-item .desc h3 {
+    font-size: 18px;
+  }
+
+  .specialization-item .desc p {
+    font-size: 15px;
+  }
 }
 
 .progress-wrap h3 {
